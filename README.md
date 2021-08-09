@@ -12,4 +12,4 @@ Furthermore it modifies the `tabIndex` value of the input fields, so you can jus
 
 Done, easy!
 
---> [Install](https://github.com/koelle25/userscripts/raw/main/ods-autofocus.js)
+--> [Install](https://github.com/koelle25/userscripts/raw/main/ods-autofocus.user.js)

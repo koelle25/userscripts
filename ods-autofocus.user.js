@@ -6,7 +6,7 @@
 // @author          Kevin Köllmann <mail@kevinkoellmann.de>
 // @license         MIT
 // @match           https://ods.fh-dortmund.de/ods*OID=17042419*
-// @downloadURL     https://github.com/koelle25/userscripts/raw/main/ods-autofocus.js
+// @downloadURL     https://github.com/koelle25/userscripts/raw/main/ods-autofocus.user.js
 // @homepageURL     https://github.com/koelle25/userscripts
 // @supportURL      https://github.com/koelle25/userscripts/issues
 // @contributionURL https://github.com/koelle25/userscripts/pulls
