@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name            ODS Stundennachweis Autofocus Input Field
 // @namespace       https://openuserjs.org/users/koelle25
-// @version         0.1.2
+// @version         0.2.0
 // @description     Sets the focus to the date input field in the "ODS (Online-Dienste für Studierende) Stundennachweis" (engl.~: "online services for students - hourly timesheet")
 // @author          koelle25
 // @copyright       2021, koelle25 (https://openuserjs.org/users/koelle25)
 // @license         MIT
-// @match           https://ods.fh-dortmund.de/ods*OID=17042419*
+// @match           https://ods.fh-dortmund.de/ods?*OID=*
 // @downloadURL     https://github.com/koelle25/userscripts/raw/main/ods-autofocus.user.js
 // @homepageURL     https://github.com/koelle25/userscripts
 // @supportURL      https://github.com/koelle25/userscripts/issues
@@ -18,51 +18,27 @@
 (function() {
     'use strict';
 
-    let table = document.getElementsByTagName('table')[1];
+    if (document.title === "Führen eines Stundennachweises") {
+        let dateInputField = document.querySelector('table tr td input[type=text][name=Datum]');
+        let beginTimeInputField = document.querySelector('table tr td input[type=text][name=Von]');
+        let endTimeInputField = document.querySelector('table tr td input[type=text][name=Bis]');
+        let submitButton = document.querySelector('table tr td input[type=submit][name^=Speichern]');
 
-    let tBody = table.childNodes[1];
+        if (dateInputField) {
+            dateInputField.tabIndex = 1;
+            dateInputField.focus();
+        }
 
-    let tableRows = [];
-    tBody.childNodes.forEach(function(item) {
-        if (item.tagName == "TR") tableRows.push(item);
-    });
+        if (beginTimeInputField) {
+            beginTimeInputField.tabIndex = 2;
+        }
 
-    let secondToLastRow = tableRows[tableRows.length-2];
+        if (endTimeInputField) {
+            endTimeInputField.tabIndex = 3;
+        }
 
-    let tableDataCells = [];
-    secondToLastRow.childNodes.forEach(function(item) {
-        if (item.tagName == "TD") tableDataCells.push(item);
-    });
-
-    let firstDataCell = tableDataCells[0];
-    let secondDataCell = tableDataCells[1];
-    let thirdDataCell = tableDataCells[2];
-    let lastDataCell = tableDataCells[tableDataCells.length-1];
-
-    let dateInputField;
-    firstDataCell.childNodes.forEach(function(item) {
-        if (item.tagName == "INPUT") dateInputField = item;
-    });
-
-    let beginTimeInputField;
-    secondDataCell.childNodes.forEach((item) => {
-        if (item.tagName == "INPUT") beginTimeInputField = item;
-    });
-
-    let endTimeInputField;
-    thirdDataCell.childNodes.forEach((item) => {
-        if (item.tagName == "INPUT") endTimeInputField = item;
-    });
-
-    let submitButton;
-    lastDataCell.childNodes.forEach((item) => {
-        if (item.tagName == "INPUT" && item.type == "submit") submitButton = item;
-    });
-
-    dateInputField.tabIndex = 1;
-    beginTimeInputField.tabIndex = 2;
-    endTimeInputField.tabIndex = 3;
-    submitButton.tabIndex = 4;
-
-    dateInputField.focus();
+        if (submitButton) {
+            submitButton.tabIndex = 4;
+        }
+    }
 })();
