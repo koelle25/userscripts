@@ -4,6 +4,7 @@
 // @version         0.1.0
 // @description     Sets the focus to the date input field in the "ODS (Online-Dienste für Studierende) Stundennachweis" (engl.~: "online services for students - hourly timesheet")
 // @author          Kevin Köllmann <mail@kevinkoellmann.de>
+// @license         MIT
 // @match           https://ods.fh-dortmund.de/ods*OID=17042419*
 // @downloadURL     https://github.com/koelle25/userscripts/raw/main/ods-autofocus.js
 // @homepageURL     https://github.com/koelle25/userscripts
