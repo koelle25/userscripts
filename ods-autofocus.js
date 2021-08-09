@@ -1,11 +1,15 @@
 // ==UserScript==
-// @name         ODS Stundennachweis Autofocus Input Field
-// @namespace    https://www.kevinkoellmann.de/
-// @version      0.1
-// @description  Sets the focus to the date input field in the "ODS (Online-Dienste für Studierende) Stundennachweis" (engl.~: "online services for students - hourly timesheet")
-// @author       Kevin Köllmann <mail@kevinkoellmann.de>
-// @match        https://ods.fh-dortmund.de/ods*OID=17042419*
-// @grant        none
+// @name            ODS Stundennachweis Autofocus Input Field
+// @namespace       https://github.com/koelle25
+// @version         0.1.0
+// @description     Sets the focus to the date input field in the "ODS (Online-Dienste für Studierende) Stundennachweis" (engl.~: "online services for students - hourly timesheet")
+// @author          Kevin Köllmann <mail@kevinkoellmann.de>
+// @match           https://ods.fh-dortmund.de/ods*OID=17042419*
+// @downloadURL     https://github.com/koelle25/userscripts/raw/main/ods-autofocus.js
+// @homepageURL     https://github.com/koelle25/userscripts
+// @supportURL      https://github.com/koelle25/userscripts/issues
+// @contributionURL https://github.com/koelle25/userscripts/pulls
+// @grant           none
 // ==/UserScript==
 
 (function() {
