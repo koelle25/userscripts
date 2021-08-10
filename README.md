@@ -12,4 +12,11 @@ Furthermore it modifies the `tabIndex` value of the input fields, so you can jus
 
 Done, easy!
 
---> [Install](https://github.com/koelle25/userscripts/raw/main/ods-autofocus.user.js)
+--> [Install](https://github.com/koelle25/userscripts/raw/master/ods-autofocus.user.js)
+
+## Kicktipp Custom CSS
+When using an Adblocker the Kicktipp website looks somewhat bad, especially of late.
+
+This script inserts some custom CSS and does jiggle around a few elements so you won't longer feel the need to scratch out your eyes.
+
+--> [Install](https://github.com/koelle25/userscripts/raw/master/kicktipp-custom-css.user.js)
