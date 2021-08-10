@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name            ODS Stundennachweis Autofocus Input Field
 // @namespace       https://openuserjs.org/users/koelle25
-// @version         0.2.0
+// @version         0.2.1
 // @description     Sets the focus to the date input field in the "ODS (Online-Dienste für Studierende) Stundennachweis" (engl.~: "online services for students - hourly timesheet")
+// @icon            https://icons.duckduckgo.com/ip2/ods.fh-dortmund.de.ico
 // @author          koelle25
 // @copyright       2021, koelle25 (https://openuserjs.org/users/koelle25)
 // @license         MIT
