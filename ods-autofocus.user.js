@@ -16,29 +16,29 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';
+  'use strict';
 
-    if (document.title === "Führen eines Stundennachweises") {
-        let dateInputField = document.querySelector('table tr td input[type=text][name=Datum]');
-        let beginTimeInputField = document.querySelector('table tr td input[type=text][name=Von]');
-        let endTimeInputField = document.querySelector('table tr td input[type=text][name=Bis]');
-        let submitButton = document.querySelector('table tr td input[type=submit][name^=Speichern]');
+  if (document.title === "Führen eines Stundennachweises") {
+    let dateInputField = document.querySelector('table tr td input[type=text][name=Datum]');
+    let beginTimeInputField = document.querySelector('table tr td input[type=text][name=Von]');
+    let endTimeInputField = document.querySelector('table tr td input[type=text][name=Bis]');
+    let submitButton = document.querySelector('table tr td input[type=submit][name^=Speichern]');
 
-        if (dateInputField) {
-            dateInputField.tabIndex = 1;
-            dateInputField.focus();
-        }
-
-        if (beginTimeInputField) {
-            beginTimeInputField.tabIndex = 2;
-        }
-
-        if (endTimeInputField) {
-            endTimeInputField.tabIndex = 3;
-        }
-
-        if (submitButton) {
-            submitButton.tabIndex = 4;
-        }
+    if (dateInputField) {
+      dateInputField.tabIndex = 1;
+      dateInputField.focus();
     }
+
+    if (beginTimeInputField) {
+      beginTimeInputField.tabIndex = 2;
+    }
+
+    if (endTimeInputField) {
+      endTimeInputField.tabIndex = 3;
+    }
+
+    if (submitButton) {
+      submitButton.tabIndex = 4;
+    }
+  }
 })();
